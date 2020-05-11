@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1589198800 source:c:\users\usuario\documents\github\psi19j_m16_2219137_ronaldoribalonga\psi19j_m16_2219137_ronaldoribalonga\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	"tugabilhetes.h"
+	"menubilhetes.h"
+
+1589197767 c:\users\usuario\documents\github\psi19j_m16_2219137_ronaldoribalonga\psi19j_m16_2219137_ronaldoribalonga\tugabilhetes.h
+
+1589198857 c:\users\usuario\documents\github\psi19j_m16_2219137_ronaldoribalonga\psi19j_m16_2219137_ronaldoribalonga\menubilhetes.h
+
