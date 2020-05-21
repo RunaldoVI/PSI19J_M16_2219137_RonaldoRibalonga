@@ -1,37 +1,45 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
+#include <conio.h>
+#include <string.h>
 #include "tugabilhetes.h"
 #include "menubilhetes.h"
-struct registrar{
+struct registar{
 char username[50];
 char email[100];
 char password[20];
 };
-struct registrar registrar[100];
+struct registar registar;
 
 struct login{
-char usernama[50];
-char pessword[20];
+char email2[100];
+char password2[20];
+char username2[50];
 };
 struct login login;
+
+struct ficheir{
+char email3[100];
+char username3[50];
+char password3[20];
+};
+struct ficheir ficheir;
 
 int main()
 {
 int a;
+
 setlocale(LC_ALL,"Portuguese");
-    //do{
+    do{
     FILE *ficheiro;
-    FILE *ficheira;
    ficheiro = fopen("registro.txt","a");
-   ficheira = fopen("login.txt","a");
-printf("---------------Bem-Vindo Ao TugaBilhetes------------\n");
-printf("             ----------1-Registrar---------\n");
-printf("              ----------2-Login----------\n");
+printf("                           ---------------Bem-Vindo Ao TugaBilhetes------------\n");
+printf("                                    ----------1-Registrar---------\n");
+printf("                                      ----------2-Login----------\n");
 tuga();
-bilhetes();
 scanf("%i",&a);
-/*switch(a)
+switch(a)
 {
     case 1:
     if(a==1)
@@ -40,43 +48,76 @@ scanf("%i",&a);
 printf("------Registrar------\n");
 fflush(stdin);
 printf("Username:\n");
-gets(registrar[a].username);
-fprintf(ficheiro,"Username %s\n",registrar[a].username);
+gets(registar.username);
+fprintf(ficheiro,"Username %s\n",registar.username);
 printf("Email:\n");
-gets(registrar[a].email);
-fprintf(ficheiro,"Email %s\n",registrar[a].email);
+gets(registar.email);
+fprintf(ficheiro,"Email %s\n",registar.email);
 printf("Password:\n");
-gets(registrar[a].password);
-fprintf(ficheiro,"Password %s\n",registrar[a].password);
+gets(registar.password);
+fprintf(ficheiro,"Password %s\n",registar.password);
 fprintf(ficheiro,"-------------\n");
 fclose(ficheiro);
 }
-    else
+else
 {
-    printf("error404\n");
+    printf("Erro404\n");
 }
 system("pause");
 system("cls");
 break;
     case 2:
-        fflush(stdin);
-        printf("----------Login----------\n");
-        printf("Username: \n");
-        gets(login.usernama);
-        fprintf(ficheira,"Username %s\n",login.usernama);
-        printf("Password: \n");
-        gets(login.pessword);
-        fprintf(ficheira,"Password %s\n",login.pessword);
-        fclose(ficheira);
-        system("pause");
-        system("cls");
+fflush(stdin);
+printf("----------Login----------\n");
+printf("Username/Email: \n");
+gets(login.username2);
+printf("Password: \n");
+gets(login.password2);
+system("pause");
+system("cls");
+if(strcmp(login.username2,registar.username)==0)
+{
+}
+else
+{
+                 printf("____ ____ ____ ____ \n");
+                 printf("|___ |__/ |__/ |  | \n");
+                 printf("|___ |  | |  | |__| \n");
+                 system("pause");
+                 system("cls");
+}
+
+
+
+        if(strcmp(login.password2,registar.password)==0)
+{
+bilhetes();
+}
+
+
+else
+{
+                 printf("____ ____ ____ ____ \n");
+                 printf("|___ |__/ |__/ |  | \n");
+                 printf("|___ |  | |  | |__| \n");
+                 system("pause");
+                 system("cls");
+}
+
+
+
+
         break;
 
 
 
 
-        default: printf("Erro");
+        default: printf("____ ____ ____ ____ \n");
+                 printf("|___ |__/ |__/ |  | \n");
+                 printf("|___ |  | |  | |__| \n");
+                 system("pause");
+                 system("cls");
+}
+}while(a!=0);
+}
 
-}
-}while(a!=0);*/
-}
