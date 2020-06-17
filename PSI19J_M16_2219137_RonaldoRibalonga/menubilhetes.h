@@ -1,20 +1,34 @@
 #ifndef MENUBILHETES_H_INCLUDED
 #define MENUBILHETES_H_INCLUDED
+struct bilhete{
+        int principal;
+        int quantidade;
+    };
+struct bilhete bilhete;
+
+struct menuadicional{
+       int escolha;
+       int deseja;
+       int deseja1;
+       int desejo;
+       int vip;
+       int precovip;
+       int viprestantes;
+};
+struct menuadicional menuadicional;
 
 void bilhetes()
 {
-    int bilhete;
-    int quantidade;
-    int escolha;
-    int comida;
-    int bebida;
-    int metu;
-    int deseja;
-    int extra;
-    int a;
+    int comida[]={0,3,2,5,5,15,9,8,5,7,2};
+    int bebida[]={0,2,2,2,2,2,3,3,2,3,1};
+    int extra[]={0,2,1,1,1,1};
+    int b,c,d,restante,resto,precobilhetes,totaldetudo;
+    int total=0;
+    int totalbilhetes=300;
+  menuadicional.viprestantes=30;
 
 
-
+do{
 printf(" _____________________________________________________________________________________________________________\n");
 printf("|                                                                                                             |\n");
 printf("|######## ##     ##  ######      ###    ########  #### ##       ##     ## ######## ######## ########  ######  |\n");
@@ -26,232 +40,228 @@ printf("|   ##    ##     ## ##    ##  ##     ## ##     ##  ##  ##       ##     #
 printf("|   ##     #######   ######   ##     ## ########  #### ######## ##     ## ########    ##    ########  ######  |\n");
 printf("|_____________________________________________________________________________________________________________|\n");
 printf("                                Bem Vindo Ao Menu de TugaBilhetes\n");
-printf("Deseja ver o nosso menu de bilhetes?\nSe sim digite 1\nSe não digite 2\n");
-scanf("%i",&bilhete);
+printf("                                   ___________________________      \n");
+printf("                                  |                           |     \n");
+printf("                                  | 1-Bilhetes                |     \n");
+printf("                                  | 2-Comida&Bebida           |     \n");
+printf("                                  | 3-VIP                     |     \n");
+printf("                                  | 4-Mudar as Cores          |     \n");
+printf("                                  | 5-Encerrar Compra         |     \n");
+printf("                                  |___________________________|     \n");
+scanf("%i",&bilhete.principal);
 system("pause");
 system("cls");
-if (bilhete==1)
+switch(bilhete.principal)
 {
+    case 1:
     tuga();
 
 printf("    ____________________________________                \n");
 printf("   |                                    |               \n");
-printf("   |    Bilhetes                        |               \n" );
+printf("   |    Bilhetes                        |               \n");
 printf("   |    Pais: Polônia                   |               \n");
 printf("   |    Cidade: Varsóvia                |               \n");
-printf("   |    Tipo de musica: Hip-Hop         |               \n");
-printf("   |    Custo de bilhete: 45-70Euros    |               \n");
-printf("   |    Direito a menu a escolha        |               \n");
+printf("   |    Tipo de musica: Beatbox         |               \n");
+printf("   |    Custo de bilhete: 70 Euros      |               \n");
+printf("   |    Bilhetes Disponiveis: %i       |               \n",totalbilhetes);
 printf("   |____________________________________|               \n");
-printf("Quantos bilhetes gostaria de comprar?\n");
-scanf("%i",&quantidade);
-if(quantidade>0)
+printf("\nQuantos bilhetes gostaria de comprar?\n");
+scanf("%i",&bilhete.quantidade);
+precobilhetes=bilhete.quantidade*70;
+if(totalbilhetes>=bilhete.quantidade)
 {
-    printf("  ___________________________   ___________________________  _________________________________                      \n");
-    printf(" |          1-Comidas        | |        2-Bebidas          ||             3-Menus             |                     \n");
-    printf(" |___________________________| |___________________________||_________________________________|                     \n");
-    printf(" | 1-Hamburger               | | 1-Pepsi                   || 1-Comida a escolha+Bebida       |                     \n");
-    printf(" | 2-Pizza                   | | 2-Coca-Cola               || 2-Comida+Batata frita           |                     \n");
-    printf(" | 3-Lasanha                 | | 3-Fanta                   || 3-Comida+bebida+batata          |                     \n");
-    printf(" | 4-Arroz De polvo          | | 4-Sumol                   || 4-2 Comidas a escolha           |                     \n");
-    printf(" | 5-Sushi                   | | 5-Cerveja                 || 5-Comida + 2 Bebidas            |                     \n");
-    printf(" | 6-Bitoque                 | | 6-Compal                  || 6-2 Comida + batatas fritas     |                     \n");
-    printf(" | 7-Esparguete A bolenhesa  | | 7-Milkshake               || 7-2 Comidas + 2Bebidas+ 2Extras |                     \n");
-    printf(" | 8-Tacos                   | | 8-Ice Tea                 || 8-Menu Familia                  |                     \n");
-    printf(" | 9-Carbonara               | | 9-Limonada                || 9-Menu Amigos                   |                     \n");
-    printf(" | 10-Cachorro Quente        | | 10-Agua                   || 10-Menu Escolha                 |                     \n");
-    printf(" |___________________________| |___________________________||_________________________________|                     \n");
-    printf("                                                                  ____________________________                      \n");
-    printf("                                                                 |           4-Extras         |                     \n");
-    printf("                                                                 |____________________________|                     \n");
-    printf("                                                                 |1-Batatas Fritas            |                     \n");
-    printf("                                                                 |2-Ketchup                   |                     \n");
-    printf("                                                                 |3-Mostarda                  |                     \n");
-    printf("                                                                 |4-Maionese                  |                     \n");
-    printf("                                                                 |5-Molho BBQ                 |                     \n");
-    printf("                                                                 |6-Pão De alho               |                     \n");
-    printf("                                                                 |____________________________|                     \n");
-    printf("Menu Familia- 4 comidas e 4 bebidas a escolha.\n");
-    printf("Menu Amigos- 5 Comidas a escolha e 5 cervejas.\n");
-    printf("Menu Escolha-Acerte o menu do dia e ganhe outro de graça + bebida\n");
-    printf("\nO que deseja escolher?\n");
-    scanf("%i",&escolha);
-    switch(escolha)
-    {
-        case 1:printf("Qual comida deseja?\n");
-               scanf("%i",&comida);
-               printf("Deseja mais alguma coisa?\n");
-               printf("1-Sim\n");
-               printf("2-Não\n");
-               scanf("%i",&deseja);
-               do{
-               printf("O que deseja mais?\n");
-    printf("  ___________________________   ___________________________  ____________________________               \n");
-    printf(" |          1-Comidas        | |        2-Bebidas          ||         3-Menus            |              \n");
-    printf(" |___________________________| |___________________________||____________________________|              \n");
-    printf(" | 1-Hamburger               | | 1-Pepsi                   || 1-Comida a escolha+Bebida  |              \n");
-    printf(" | 2-Pizza                   | | 2-Coca-Cola               || 2-Comida+1 extra           |              \n");
-    printf(" | 3-Lasanha                 | | 3-Fanta                   || 3-Comida+bebida+1 extra    |              \n");
-    printf(" | 4-Arroz De polvo          | | 4-Sumol                   || 4-2 Comidas a escolha      |              \n");
-    printf(" | 5-Sushi                   | | 5-Cerveja                 || 5-Comida + 2 Bebidas       |              \n");
-    printf(" | 6-Bitoque                 | | 6-Compal                  || 6-2 Comida + 1 extra       |              \n");
-    printf(" | 7-Esparguete A bolenhesa  | | 7-Milkshake               || 7-2 comidas+2 bebida+1extra|              \n");
-    printf(" | 8-Tacos                   | | 8-Ice Tea                 || 8-Menu Familia             |              \n");
-    printf(" | 9-Carbonara               | | 9-Limonada                || 9-Menu Amigos              |              \n");
-    printf(" | 10-Cachorro Quente        | | 10-Agua                   || 10-Menu Escolha            |              \n");
-    printf(" |___________________________| |___________________________||___________________________ |              \n");
-    printf("                                                             ____________________________               \n");
-    printf("                                                            |           4-Extras         |              \n");
-    printf("                                                            |____________________________|              \n");
-    printf("                                                            |1-Batatas Fritas            |              \n");
-    printf("                                                            |2-Ketchup                   |              \n");
-    printf("                                                            |3-Mostarda                  |              \n");
-    printf("                                                            |4-Maionese                  |              \n");
-    printf("                                                            |5-Molho BBQ                 |              \n");
-    printf("                                                            |6-Pão De alho               |              \n");
-    printf("                                                            |____________________________|              \n");
-    printf("Menu Familia- 4 comidas e 4 bebidas a escolha.\n");
-    printf("Menu Amigos- 5 Comidas a escolha e 5 cervejas.\n");
-    printf("Menu Escolha-Acerte o menu do dia e ganhe outro de graça + bebida\n");
-    scanf("%i",&escolha);
-    switch(escolha)
-    {
-        case 1:printf("Que Comida deseja?");
-               scanf("%i",&comida);
-               printf("Deseja mais alguma coisa?\n");
-               printf("1-Sim\n");
-               printf("2-Não\n");
-               scanf("%i",&deseja);
-               break;
-        case 2:printf("Que bebida deseja?");
-               scanf("%i",&bebida);
-               printf("Deseja mais alguma coisa?\n");
-               printf("1-Sim\n");
-               printf("2-Não\n");
-               scanf("%i",&deseja);
-               break;
-        case 3:printf("Que menu deseja?\n");
-               scanf("%i",&metu);
-               switch (metu)
-               {
-            case 1:printf("Que Comida deseja?\n");
-                   scanf("%i",&comida);
-                   printf("Que bebida deseja?\n");
-                   scanf("%i",&bebida);
-                   printf("Deseja mais alguma coisa?\n");
-                   printf("1-Sim\n");
-                   printf("2-Não\n");
-                   scanf("%i",&deseja);
-                   system("pause");
-                   system("cls");
-                   break;
-            case 2:printf("Que Comida deseja?\n");
-                   scanf("%i",&comida);
-                   printf("Qual extra deseja?\n");
-                   scanf("%i",&extra);
-                   printf("1-Sim\n");
-                   printf("2-Não\n");
-                   scanf("%i",&deseja);
-                   system("pause");
-                   system("cls");
-                   break;
-            case 3:printf("Que Comida deseja?\n");
-                   scanf("%i",&comida);
-                   printf("Que bebida deseja?\n");
-                   scanf("%i",&bebida);
-                   printf("Qual extra deseja?\n");
-                   scanf("%i",&extra);
-                   printf("Deseja mais alguma coisa?\n");
-                   printf("1-Sim\n");
-                   printf("2-Não\n");
-                   scanf("%i",&deseja);
-                   system("pause");
-                   system("cls");
-                   break;
-            case 4:printf("Que Comida deseja?\n");
-                   scanf("%i",&comida);
-                   printf("Qual a outra que comida que deseja?\n");
-                   scanf("%i",&comida);
-                   printf("1-Sim\n");
-                   printf("2-Não\n");
-                   scanf("%i",&deseja);
-                   system("pause");
-                   system("cls");
-                   break;
-            case 5:printf("Que Comida deseja?\n");
-                   scanf("%i",&comida);
-                   printf("Que bebida deseja?\n");
-                   scanf("%i",&bebida);
-                   printf("Qual a outra bebida deseja?\n");
-                   scanf("%i",&bebida);
-                   printf("1-Sim\n");
-                   printf("2-Não\n");
-                   scanf("%i",&deseja);
-                   system("pause");
-                   system("cls");
-                   break;
-            case 6:printf("Que Comida deseja?\n");
-                   scanf("%i",&comida);
-                   printf("Qual a outra que comida que deseja?\n");
-                   scanf("%i",&comida);
-                   printf("Qual extra deseja?\n");
-                   scanf("%i",&extra);
-                   printf("1-Sim\n");
-                   printf("2-Não\n");
-                   scanf("%i",&deseja);
-                   system("pause");
-                   system("cls");
-                   break;
-            case 7:printf("Que Comida deseja?\n");
-                   scanf("%i",&comida);
-                   printf("Qual a outra que comida que deseja?\n");
-                   scanf("%i",&comida);
-                   printf("Que bebida deseja?\n");
-                   scanf("%i",&bebida);
-                   printf("Qual a outra bebida deseja?\n");
-                   scanf("i",&bebida);
-                   printf("Qual extra deseja?\n");
-                   scanf("%i",&extra);
-                   printf("Qual o outro extra que deseja?\n");
-                   scanf("%i",&extra);
-                   printf("1-Sim\n");
-                   printf("2-Não\n");
-                   scanf("%i",&deseja);
-                   system("pause");
-                   system("cls");
-                   break;
-            case 8:
-                    printf("Digite a %i comida que deseja?\n",a+1);
-                    scanf("%i",&comida);
-                    printf("Digite a %i bebida que deseja?\n",a+1);
-                    scanf("%i",&bebida);
-
-                   break;
-                   default:printf("Erro\n");
-
-               }
-
-    }
-
-
-
-               }while(deseja!=2);
-    }
-
-
-
-}
-else
-{
-    printf("____ ____ ____ ____ \n");
-    printf("|___ |__/ |__/ |  | \n");
-    printf("|___ |  | |  | |__| \n");
+    totalbilhetes=totalbilhetes-bilhete.quantidade;
     system("pause");
     system("cls");
 }
+else
+{
+printf("Erro já nao existem mais bilhetes disponiveis\n");
+system("pause");
+system("cls");
+}
+break;
+default:printf("\n");
+if(bilhete.quantidade>=1)
+{
+    switch(bilhete.principal)
+    {
 
+case 2:
+    do{
+    printf("  _______________________________________   ______________________________                 \n");
+    printf(" |               1-Comidas               | |        2-Bebidas             |                \n");
+    printf(" |_______________________________________| |______________________________|                \n");
+    printf(" | 1-Hamburger- 3 Euros                  | | 1-Pepsi- 2 Euros             |                \n");
+    printf(" | 2-Pizza- 2 Euros                      | | 2-Coca-Cola- 2 Euros         |                \n");
+    printf(" | 3-Lasanha- 5 Euros                    | | 3-Fanta- 2 Euros             |                \n");
+    printf(" | 4-Arroz De polvo- 5 Euros             | | 4-Sumol- 2 Euros             |                \n");
+    printf(" | 5-Sushi- 15 Euros Por 20 Peças        | | 5-Cerveja- 2 Euros           |                \n");
+    printf(" | 6-Bitoque- 9 Euros                    | | 6-Compal- 3 Euros            |                \n");
+    printf(" | 7-Esparguete A bolenhesa- 8 Euros     | | 7-Milkshake Banana- 3 Euros  |                \n");
+    printf(" | 8-Tacos- 5 Euros 2 Tacos              | | 8-Ice Tea- 2 Euros           |                \n");
+    printf(" | 9-Carbonara- 7 Euros                  | | 9-Limonada- 3 Euros          |                \n");
+    printf(" | 10-Cachorro Quente- 2 Euros           | | 10-Agua- 1 Euro              |                \n");
+    printf(" | 0-Nada                                | | 0-Nada                       |                \n");
+    printf(" |_______________________________________| |______________________________|                \n");
+    printf("                                            ______________________________                \n");
+    printf("                                           |          4-Extras            |               \n");
+    printf("                                           |______________________________|               \n");
+    printf("                                           | 1-Batatas Fritas- 2 euros    |               \n");
+    printf("                                           | 2-Ketchup 250mgl- 1 Euro     |               \n");
+    printf("                                           | 3-Mostarda 250mgl- 1 euro    |               \n");
+    printf("                                           | 4-Maionese 250mgl- 1 euro    |               \n");
+    printf("                                           | 5-Pipocas  300g-1 euro       |               \n");
+    printf("                                           | 0-Nada                       |               \n");
+    printf("                                           |______________________________|               \n");
+    printf("Qual comida deseja?\n");
+    scanf("%i",&b);
+    if(b>10)
+    {
+        printf("Erro\n");
+        system("pause");
+        system("cls");
+        break;
+    }
+    else
+    {
+
+    }
+    printf("Que bebida deseja?\n");
+    scanf("%i",&c);
+    if(c>10)
+    {
+        printf("Erro\n");
+        system("pause");
+        system("cls");
+        break;
+    }
+    else
+    {
+
+    }
+    printf("Deseja algum extra?\n");
+    scanf("%i",&d);
+    if(d>10)
+    {
+        printf("Erro\n");
+        system("pause");
+        system("cls");
+        break;
+    }
+    else
+    {
+
+    }
+    total=total+comida[b]+bebida[c]+extra[d];
+    printf("Deseja mais alguma coisa?\n");
+    printf("1-Sim\n");
+    printf("2-Não\n");
+    scanf("%i",&menuadicional.deseja);
+    system("pause");
+    system("cls");
+    }while(menuadicional.deseja!=2);
+    break;
+case 3:
+
+    printf("Deseja adicionar VIP ao seu pedido?\n");
+    printf(" ___________________________\n");
+    printf("| 1-Informações sobre o VIP |\n");
+    printf("| 2-VIP                     |\n");
+    printf("| 3-Voltar ao menu          | \n");
+    printf("|  VIP Restantes %i         |\n",menuadicional.viprestantes);
+    printf("|___________________________|\n");
+    scanf("%i",&menuadicional.desejo);
+    switch (menuadicional.desejo)
+    {
+    case 1:
+        printf("O nosso VIP da acesso aos bastidores para conhecer os seus artitistas favoritos e da acesso a primeira fila por apenas\nmais 10 Euros\n");
+        system("pause");
+        system("cls");
+        break;
+
+    case 2:
+        printf("Quantos VIPS gostaria de adicionar?\n");
+        scanf("%i",&menuadicional.vip);
+    if(menuadicional.viprestantes>=menuadicional.vip)
+    {
+
+
+        if(menuadicional.viprestantes>=menuadicional.desejo)
+    {
+        if(menuadicional.vip<=bilhete.quantidade)
+        {
+        menuadicional.viprestantes=menuadicional.viprestantes-menuadicional.vip;
+        menuadicional.precovip=menuadicional.vip*10;
+        system("pause");
+        system("cls");
+        }
+        else
+        {
+        printf("Nao podes comprar mais vips do que bilhetes\n");
+        system("pause");
+        system("cls");
+        }
+    }
+    }
+        else
+    {
+        printf("Ja nao ha mais vips disponveis\n");
+        system("pause");
+        system("cls");
+    }
+        break;
+    case 3:
+        system("pause");
+        system("cls");
+    break;
+    default: printf("Erro\n");
+        system("pause");
+        system("cls");
+    }
+    break;
+    break;
+    case 4:
+        cores();
+        break;
+case 5:
+    totaldetudo=total+precobilhetes+menuadicional.precovip;
+    FILE*ficheiro;
+ficheiro=(fopen("Talao.txt","w"));
+fprintf(ficheiro,"---------Talao---------\n");
+fprintf(ficheiro,"Preço Comida  %i\n",total);
+fprintf(ficheiro,"----------------\n");
+fprintf(ficheiro,"Preço Bilhetes %i\n",precobilhetes);
+fprintf(ficheiro,"----------------\n");
+fprintf(ficheiro,"Preço VIP %i\n",menuadicional.precovip);
+fprintf(ficheiro,"----------------\n");
+fprintf(ficheiro,"Total %i\n",totaldetudo);
+fclose(ficheiro);
+printf(" _______________________________               \n");
+printf("             Talao                             \n");
+printf(" _______________________________               \n");
+printf(" Quantidade de bilhetes %i                     \n",bilhete.quantidade);
+printf(" O preço da comida sera %i                     \n",total);
+printf(" O preço dos bilhetes sera %i                  \n",precobilhetes);
+printf(" O preço do VIP sera %i                        \n",menuadicional.precovip);
+printf(" Total     =     %i  Euros                     \n",totaldetudo);
+printf("_______________________________                \n");
+system("pause");
+system("cls");
+break;
+}//switch do cliente bilhete erro
+}//if para caso o cliente nao tenho comprado bilhete de erro
+else
+{
+    printf("Precisas de comprar um bilhete primeiro\n");
+    system("pause");
+    system("cls");
 }
-}
+}//switch principal
+}while(bilhete.principal!=5);//o loop do primeiro do
+}  //acaba void
+
+
 
 
 

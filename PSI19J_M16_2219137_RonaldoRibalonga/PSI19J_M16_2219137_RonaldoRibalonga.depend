@@ -1,14 +1,26 @@
 # depslib dependency file v1.0
-1589994054 source:c:\users\usuario\documents\github\psi19j_m16_2219137_ronaldoribalonga\psi19j_m16_2219137_ronaldoribalonga\main.c
+1592383974 source:c:\users\usuario\documents\github\psi19j_m16_2219137_ronaldoribalonga\psi19j_m16_2219137_ronaldoribalonga\main.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
 	<conio.h>
 	<string.h>
+	<windows.h>
 	"tugabilhetes.h"
 	"menubilhetes.h"
+	"engbilhete.h"
+	"CoresEng.h"
+	"cores.h"
 
 1589201565 c:\users\usuario\documents\github\psi19j_m16_2219137_ronaldoribalonga\psi19j_m16_2219137_ronaldoribalonga\tugabilhetes.h
 
-1590023098 c:\users\usuario\documents\github\psi19j_m16_2219137_ronaldoribalonga\psi19j_m16_2219137_ronaldoribalonga\menubilhetes.h
+1592384082 c:\users\usuario\documents\github\psi19j_m16_2219137_ronaldoribalonga\psi19j_m16_2219137_ronaldoribalonga\menubilhetes.h
+
+1592306876 c:\users\usuario\documents\github\psi19j_m16_2219137_ronaldoribalonga\psi19j_m16_2219137_ronaldoribalonga\cores.h
+
+1592253639 c:\users\usuario\documents\github\psi19j_m16_2219137_ronaldoribalonga\psi19j_m16_2219137_ronaldoribalonga\coresdofundo.h
+
+1592360917 c:\users\usuario\documents\github\psi19j_m16_2219137_ronaldoribalonga\psi19j_m16_2219137_ronaldoribalonga\engbilhete.h
+
+1592346314 c:\users\usuario\documents\github\psi19j_m16_2219137_ronaldoribalonga\psi19j_m16_2219137_ronaldoribalonga\coreseng.h
 
