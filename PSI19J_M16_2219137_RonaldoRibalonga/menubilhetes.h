@@ -227,7 +227,7 @@ case 3:
 case 5:
     totaldetudo=total+precobilhetes+menuadicional.precovip;
     FILE*ficheiro;
-ficheiro=(fopen("Talao.txt","w"));
+ficheiro=(fopen("Talao.txt","a+"));
 fprintf(ficheiro,"---------Talao---------\n");
 fprintf(ficheiro,"Preço Comida  %i\n",total);
 fprintf(ficheiro,"----------------\n");

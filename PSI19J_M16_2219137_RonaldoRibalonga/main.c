@@ -90,7 +90,7 @@ switch(a)
 {
 
 printf("------Registrar------\n");
-ficheiro = fopen("registro.txt","w");
+ficheiro = fopen("registro.txt","a+");
 printf("Usuário:\n");
 fflush(stdin);
 gets(registar.username);
@@ -145,7 +145,7 @@ system("pause");
 system("cls");
 break;
     case 2:
-        ficheiro = fopen("login.txt","w");
+        ficheiro = fopen("login.txt","a+");
 fflush(stdin);
 printf("----------Login----------\n");
 printf("Username \n");
@@ -214,7 +214,7 @@ switch(a)
     if(a==1)
 {
 FILE * ficheiro;
-ficheiro = fopen("Registereng.txt","w");
+ficheiro = fopen("Registereng.txt","a+");
 printf("------Register------\n");
 fflush(stdin);
 printf("Username:\n");
@@ -268,7 +268,7 @@ system("pause");
 system("cls");
 break;
     case 2:
-        ficheiro = fopen("Logineng.txt","w");
+        ficheiro = fopen("Logineng.txt","a+");
 fflush(stdin);
 printf("----------Login----------\n");
 printf("Username \n");

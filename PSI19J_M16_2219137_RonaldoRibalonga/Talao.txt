@@ -1,8 +1,8 @@
 ---------Talao---------
-Preço Comida  0
+Preço Comida  8
 ----------------
-Preço Bilhetes 20860
+Preço Bilhetes 140
 ----------------
 Preço VIP 0
 ----------------
-Total 20860
+Total 148
